@@ -16,11 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let viewController = storyboard.instantiateInitialViewController() {
-            window?.rootViewController = viewController
-            window?.makeKeyAndVisible()
-        }
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        if let viewController = storyboard.instantiateInitialViewController() {
+//            window?.rootViewController = viewController
+//            window?.makeKeyAndVisible()
+//        }
+        
+        let navController = UINavigationController(rootViewController: CreatePodcastViewController())
+        window?.rootViewController = navController
+        window?.makeKeyAndVisible()
         
         return true
     }

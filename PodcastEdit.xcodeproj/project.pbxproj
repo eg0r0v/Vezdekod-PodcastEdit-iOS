@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,26 @@
 		01A8D8CF2512797C001DCEBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A8D8CE2512797C001DCEBD /* LaunchScreen.storyboard */; };
 		01A8D8D125127D61001DCEBD /* PodcastAddedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A8D8D025127D61001DCEBD /* PodcastAddedViewController.swift */; };
 		53B1744391E8283F0C96AEAA /* Pods_PodcastEdit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC830EAB19E277477741045 /* Pods_PodcastEdit.framework */; };
+		893CCF8A25129218008A5470 /* CreatePodcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893CCF8925129218008A5470 /* CreatePodcastViewController.swift */; };
+		893CCF8C2512925C008A5470 /* CheckboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893CCF8B2512925C008A5470 /* CheckboxTableViewCell.swift */; };
+		893CCF8E25129264008A5470 /* CheckboxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893CCF8D25129264008A5470 /* CheckboxTableViewCell.xib */; };
+		893CCF9225129297008A5470 /* IconFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893CCF9125129297008A5470 /* IconFieldTableViewCell.swift */; };
+		893CCF94251292A1008A5470 /* IconFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893CCF93251292A1008A5470 /* IconFieldTableViewCell.xib */; };
+		893CCF97251292DE008A5470 /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893CCF96251292DE008A5470 /* TextViewTableViewCell.swift */; };
+		893CCF99251292E3008A5470 /* TextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893CCF98251292E3008A5470 /* TextViewTableViewCell.xib */; };
+		893CCF9B25129717008A5470 /* CreatePosdacstVMF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893CCF9A25129717008A5470 /* CreatePosdacstVMF.swift */; };
+		893CCF9E25129A98008A5470 /* CreatePodcastSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893CCF9D25129A98008A5470 /* CreatePodcastSettings.swift */; };
+		893CCFA12512A606008A5470 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893CCFA02512A606008A5470 /* TextField.swift */; };
+		893CCFA42512A69B008A5470 /* TextAndValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893CCFA32512A69B008A5470 /* TextAndValue.swift */; };
+		893CCFA62512A6BD008A5470 /* TextValueIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893CCFA52512A6BD008A5470 /* TextValueIcon.swift */; };
+		893CCFA92512A843008A5470 /* ImagePickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893CCFA82512A843008A5470 /* ImagePickerService.swift */; };
+		893CCFAC2512AA28008A5470 /* EmptyStateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893CCFAB2512AA28008A5470 /* EmptyStateTableViewCell.swift */; };
+		893CCFAE2512AA2D008A5470 /* EmptyStateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893CCFAD2512AA2D008A5470 /* EmptyStateTableViewCell.xib */; };
+		893CCFB02512AA6C008A5470 /* TitleSubtitleAndValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893CCFAF2512AA6C008A5470 /* TitleSubtitleAndValue.swift */; };
+		893CCFB32512AE47008A5470 /* LinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893CCFB22512AE47008A5470 /* LinkTableViewCell.swift */; };
+		893CCFB52512AE82008A5470 /* LinkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893CCFB42512AE82008A5470 /* LinkTableViewCell.xib */; };
+		893CCFB82512B10B008A5470 /* FileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893CCFB72512B10B008A5470 /* FileTableViewCell.swift */; };
+		893CCFBA2512B110008A5470 /* FileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893CCFB92512B110008A5470 /* FileTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +75,26 @@
 		01A8D8D025127D61001DCEBD /* PodcastAddedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastAddedViewController.swift; sourceTree = "<group>"; };
 		2BC830EAB19E277477741045 /* Pods_PodcastEdit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PodcastEdit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80564395478A67FC4DCB51B7 /* Pods-PodcastEdit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodcastEdit.release.xcconfig"; path = "Pods/Target Support Files/Pods-PodcastEdit/Pods-PodcastEdit.release.xcconfig"; sourceTree = "<group>"; };
+		893CCF8925129218008A5470 /* CreatePodcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePodcastViewController.swift; sourceTree = "<group>"; };
+		893CCF8B2512925C008A5470 /* CheckboxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxTableViewCell.swift; sourceTree = "<group>"; };
+		893CCF8D25129264008A5470 /* CheckboxTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckboxTableViewCell.xib; sourceTree = "<group>"; };
+		893CCF9125129297008A5470 /* IconFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconFieldTableViewCell.swift; sourceTree = "<group>"; };
+		893CCF93251292A1008A5470 /* IconFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconFieldTableViewCell.xib; sourceTree = "<group>"; };
+		893CCF96251292DE008A5470 /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCell.swift; sourceTree = "<group>"; };
+		893CCF98251292E3008A5470 /* TextViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewTableViewCell.xib; sourceTree = "<group>"; };
+		893CCF9A25129717008A5470 /* CreatePosdacstVMF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePosdacstVMF.swift; sourceTree = "<group>"; };
+		893CCF9D25129A98008A5470 /* CreatePodcastSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePodcastSettings.swift; sourceTree = "<group>"; };
+		893CCFA02512A606008A5470 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		893CCFA32512A69B008A5470 /* TextAndValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAndValue.swift; sourceTree = "<group>"; };
+		893CCFA52512A6BD008A5470 /* TextValueIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextValueIcon.swift; sourceTree = "<group>"; };
+		893CCFA82512A843008A5470 /* ImagePickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerService.swift; sourceTree = "<group>"; };
+		893CCFAB2512AA28008A5470 /* EmptyStateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateTableViewCell.swift; sourceTree = "<group>"; };
+		893CCFAD2512AA2D008A5470 /* EmptyStateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateTableViewCell.xib; sourceTree = "<group>"; };
+		893CCFAF2512AA6C008A5470 /* TitleSubtitleAndValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleAndValue.swift; sourceTree = "<group>"; };
+		893CCFB22512AE47008A5470 /* LinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkTableViewCell.swift; sourceTree = "<group>"; };
+		893CCFB42512AE82008A5470 /* LinkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LinkTableViewCell.xib; sourceTree = "<group>"; };
+		893CCFB72512B10B008A5470 /* FileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTableViewCell.swift; sourceTree = "<group>"; };
+		893CCFB92512B110008A5470 /* FileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileTableViewCell.xib; sourceTree = "<group>"; };
 		F82E36AF37C8B618E7625A7A /* Pods-PodcastEdit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodcastEdit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PodcastEdit/Pods-PodcastEdit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,9 +131,13 @@
 		01A8D89B251276D6001DCEBD /* PodcastEdit */ = {
 			isa = PBXGroup;
 			children = (
+				893CCFA72512A83A008A5470 /* UIHelpers */,
+				893CCF9F2512A600008A5470 /* Views */,
+				893CCF882512920A008A5470 /* Cells */,
 				01A8D89C251276D6001DCEBD /* AppDelegate.swift */,
 				01A8D8A0251276D6001DCEBD /* MyPodcastsViewController.swift */,
 				01A8D8D025127D61001DCEBD /* PodcastAddedViewController.swift */,
+				893CCF9C251299EC008A5470 /* CreatePodcast */,
 				01A8D8C925127959001DCEBD /* Extensions */,
 				01A8D8A2251276D6001DCEBD /* Main.storyboard */,
 				01A8D8A5251276DA001DCEBD /* Assets.xcassets */,
@@ -139,6 +183,110 @@
 				80564395478A67FC4DCB51B7 /* Pods-PodcastEdit.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		893CCF882512920A008A5470 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				893CCFB62512B0FE008A5470 /* FIleTableViewCell */,
+				893CCFA22512A68B008A5470 /* Data */,
+				893CCFB12512AE39008A5470 /* LinkTableViewCell */,
+				893CCFAA2512AA1E008A5470 /* EmptyStateTableViewCell */,
+				893CCF95251292CE008A5470 /* TextViewTableViewCell */,
+				893CCF902512928A008A5470 /* IconFieldTableViewCell */,
+				893CCF8F25129268008A5470 /* CheckboxTableViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		893CCF8F25129268008A5470 /* CheckboxTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				893CCF8B2512925C008A5470 /* CheckboxTableViewCell.swift */,
+				893CCF8D25129264008A5470 /* CheckboxTableViewCell.xib */,
+			);
+			path = CheckboxTableViewCell;
+			sourceTree = "<group>";
+		};
+		893CCF902512928A008A5470 /* IconFieldTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				893CCF9125129297008A5470 /* IconFieldTableViewCell.swift */,
+				893CCF93251292A1008A5470 /* IconFieldTableViewCell.xib */,
+			);
+			path = IconFieldTableViewCell;
+			sourceTree = "<group>";
+		};
+		893CCF95251292CE008A5470 /* TextViewTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				893CCF96251292DE008A5470 /* TextViewTableViewCell.swift */,
+				893CCF98251292E3008A5470 /* TextViewTableViewCell.xib */,
+			);
+			path = TextViewTableViewCell;
+			sourceTree = "<group>";
+		};
+		893CCF9C251299EC008A5470 /* CreatePodcast */ = {
+			isa = PBXGroup;
+			children = (
+				893CCF8925129218008A5470 /* CreatePodcastViewController.swift */,
+				893CCF9A25129717008A5470 /* CreatePosdacstVMF.swift */,
+				893CCF9D25129A98008A5470 /* CreatePodcastSettings.swift */,
+			);
+			path = CreatePodcast;
+			sourceTree = "<group>";
+		};
+		893CCF9F2512A600008A5470 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				893CCFA02512A606008A5470 /* TextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		893CCFA22512A68B008A5470 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				893CCFA32512A69B008A5470 /* TextAndValue.swift */,
+				893CCFA52512A6BD008A5470 /* TextValueIcon.swift */,
+				893CCFAF2512AA6C008A5470 /* TitleSubtitleAndValue.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		893CCFA72512A83A008A5470 /* UIHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				893CCFA82512A843008A5470 /* ImagePickerService.swift */,
+			);
+			path = UIHelpers;
+			sourceTree = "<group>";
+		};
+		893CCFAA2512AA1E008A5470 /* EmptyStateTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				893CCFAB2512AA28008A5470 /* EmptyStateTableViewCell.swift */,
+				893CCFAD2512AA2D008A5470 /* EmptyStateTableViewCell.xib */,
+			);
+			path = EmptyStateTableViewCell;
+			sourceTree = "<group>";
+		};
+		893CCFB12512AE39008A5470 /* LinkTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				893CCFB22512AE47008A5470 /* LinkTableViewCell.swift */,
+				893CCFB42512AE82008A5470 /* LinkTableViewCell.xib */,
+			);
+			path = LinkTableViewCell;
+			sourceTree = "<group>";
+		};
+		893CCFB62512B0FE008A5470 /* FIleTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				893CCFB72512B10B008A5470 /* FileTableViewCell.swift */,
+				893CCFB92512B110008A5470 /* FileTableViewCell.xib */,
+			);
+			path = FIleTableViewCell;
 			sourceTree = "<group>";
 		};
 		DF32D24935F59F19BA841CF0 /* Frameworks */ = {
@@ -213,6 +361,8 @@
 				01A8D8C225127834001DCEBD /* TTCommons-Medium.ttf in Resources */,
 				01A8D8C125127834001DCEBD /* TTCommons-ExtraLight.ttf in Resources */,
 				01A8D8CF2512797C001DCEBD /* LaunchScreen.storyboard in Resources */,
+				893CCFBA2512B110008A5470 /* FileTableViewCell.xib in Resources */,
+				893CCF8E25129264008A5470 /* CheckboxTableViewCell.xib in Resources */,
 				01A8D8C525127834001DCEBD /* TTCommons-Light.ttf in Resources */,
 				01A8D8A6251276DA001DCEBD /* Assets.xcassets in Resources */,
 				01A8D8BE25127834001DCEBD /* TTCommons-Regular.ttf in Resources */,
@@ -220,6 +370,10 @@
 				01A8D8BF25127834001DCEBD /* TTCommons-Black.ttf in Resources */,
 				01A8D8C325127834001DCEBD /* SF-Pro-Text-Regular.otf in Resources */,
 				01A8D8C025127834001DCEBD /* TTCommons-Bold.ttf in Resources */,
+				893CCF94251292A1008A5470 /* IconFieldTableViewCell.xib in Resources */,
+				893CCF99251292E3008A5470 /* TextViewTableViewCell.xib in Resources */,
+				893CCFAE2512AA2D008A5470 /* EmptyStateTableViewCell.xib in Resources */,
+				893CCFB52512AE82008A5470 /* LinkTableViewCell.xib in Resources */,
 				01A8D8C625127834001DCEBD /* SF-Pro-Text-Semibold.otf in Resources */,
 				01A8D8BD25127834001DCEBD /* TTCommons-Thin.ttf in Resources */,
 				01A8D8C725127834001DCEBD /* SF-Pro-Text-Medium.otf in Resources */,
@@ -253,23 +407,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PodcastEdit/Pods-PodcastEdit-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
-				"${BUILT_PRODUCTS_DIR}/YPImagePicker/YPImagePicker.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PodcastEdit/Pods-PodcastEdit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YPImagePicker.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PodcastEdit/Pods-PodcastEdit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PodcastEdit/Pods-PodcastEdit-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PodcastEdit/Pods-PodcastEdit-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -279,11 +426,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				893CCFA92512A843008A5470 /* ImagePickerService.swift in Sources */,
+				893CCFA42512A69B008A5470 /* TextAndValue.swift in Sources */,
 				01A8D8A1251276D6001DCEBD /* MyPodcastsViewController.swift in Sources */,
 				01A8D8D125127D61001DCEBD /* PodcastAddedViewController.swift in Sources */,
+				893CCF8C2512925C008A5470 /* CheckboxTableViewCell.swift in Sources */,
+				893CCFA12512A606008A5470 /* TextField.swift in Sources */,
 				01A8D89D251276D6001DCEBD /* AppDelegate.swift in Sources */,
+				893CCF9E25129A98008A5470 /* CreatePodcastSettings.swift in Sources */,
+				893CCF9B25129717008A5470 /* CreatePosdacstVMF.swift in Sources */,
+				893CCF8A25129218008A5470 /* CreatePodcastViewController.swift in Sources */,
+				893CCFB02512AA6C008A5470 /* TitleSubtitleAndValue.swift in Sources */,
+				893CCFB32512AE47008A5470 /* LinkTableViewCell.swift in Sources */,
+				893CCFB82512B10B008A5470 /* FileTableViewCell.swift in Sources */,
 				01A8D8CC25127959001DCEBD /* UIView+Border.swift in Sources */,
+				893CCFAC2512AA28008A5470 /* EmptyStateTableViewCell.swift in Sources */,
 				01A8D8CD25127959001DCEBD /* UIColor+RGB.swift in Sources */,
+				893CCF9225129297008A5470 /* IconFieldTableViewCell.swift in Sources */,
+				893CCF97251292DE008A5470 /* TextViewTableViewCell.swift in Sources */,
+				893CCFA62512A6BD008A5470 /* TextValueIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +584,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HS9D68HM23;
 				INFOPLIST_FILE = PodcastEdit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -442,6 +604,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HS9D68HM23;
 				INFOPLIST_FILE = PodcastEdit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

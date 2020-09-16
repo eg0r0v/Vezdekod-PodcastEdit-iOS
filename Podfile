@@ -4,4 +4,5 @@ use_frameworks!
 target 'PodcastEdit' do
   pod 'SnapKit'
   pod 'YPImagePicker'
+  pod 'SwiftyListKit'
 end
