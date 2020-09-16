@@ -27,6 +27,7 @@
 		01A8D8CD25127959001DCEBD /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A8D8CB25127959001DCEBD /* UIColor+RGB.swift */; };
 		01A8D8CF2512797C001DCEBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A8D8CE2512797C001DCEBD /* LaunchScreen.storyboard */; };
 		01A8D8D125127D61001DCEBD /* PodcastAddedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A8D8D025127D61001DCEBD /* PodcastAddedViewController.swift */; };
+		01A8D8D3251296BC001DCEBD /* PodcastEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A8D8D2251296BC001DCEBD /* PodcastEditViewController.swift */; };
 		53B1744391E8283F0C96AEAA /* Pods_PodcastEdit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC830EAB19E277477741045 /* Pods_PodcastEdit.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		01A8D8CB25127959001DCEBD /* UIColor+RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
 		01A8D8CE2512797C001DCEBD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01A8D8D025127D61001DCEBD /* PodcastAddedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastAddedViewController.swift; sourceTree = "<group>"; };
+		01A8D8D2251296BC001DCEBD /* PodcastEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastEditViewController.swift; sourceTree = "<group>"; };
 		2BC830EAB19E277477741045 /* Pods_PodcastEdit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PodcastEdit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80564395478A67FC4DCB51B7 /* Pods-PodcastEdit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodcastEdit.release.xcconfig"; path = "Pods/Target Support Files/Pods-PodcastEdit/Pods-PodcastEdit.release.xcconfig"; sourceTree = "<group>"; };
 		F82E36AF37C8B618E7625A7A /* Pods-PodcastEdit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodcastEdit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PodcastEdit/Pods-PodcastEdit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				01A8D89C251276D6001DCEBD /* AppDelegate.swift */,
 				01A8D8A0251276D6001DCEBD /* MyPodcastsViewController.swift */,
+				01A8D8D2251296BC001DCEBD /* PodcastEditViewController.swift */,
 				01A8D8D025127D61001DCEBD /* PodcastAddedViewController.swift */,
 				01A8D8C925127959001DCEBD /* Extensions */,
 				01A8D8A2251276D6001DCEBD /* Main.storyboard */,
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01A8D8A1251276D6001DCEBD /* MyPodcastsViewController.swift in Sources */,
+				01A8D8D3251296BC001DCEBD /* PodcastEditViewController.swift in Sources */,
 				01A8D8D125127D61001DCEBD /* PodcastAddedViewController.swift in Sources */,
 				01A8D89D251276D6001DCEBD /* AppDelegate.swift in Sources */,
 				01A8D8CC25127959001DCEBD /* UIView+Border.swift in Sources */,

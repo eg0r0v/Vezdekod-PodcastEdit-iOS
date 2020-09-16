@@ -54,6 +54,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="9SA-5A-2sr" kind="show" id="nnr-yA-SKs"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавляйте, редактируйте и делитесь подкастами вашего сообщества" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mj7-4S-JCE">
                                         <rect key="frame" x="0.0" y="95.5" width="289.5" height="37.5"/>
@@ -190,9 +193,207 @@
             </objects>
             <point key="canvasLocation" x="-722" y="98"/>
         </scene>
+        <!--Podcast Edit View Controller-->
+        <scene sceneID="Sig-NJ-Mgb">
+            <objects>
+                <viewController storyboardIdentifier="PodcastEditViewController" id="9SA-5A-2sr" customClass="PodcastEditViewController" customModule="PodcastEdit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dox-UH-l7O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnt-1s-NA6" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="52"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gU0-VL-IDh">
+                                        <rect key="frame" x="125.5" y="14" width="163.5" height="24.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Редактирование">
+                                                <attributes>
+                                                    <font key="NSFont" size="21" name="TTCommons-DemiBold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQY-ov-kKU">
+                                        <rect key="frame" x="0.0" y="6" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="0uu-Wr-pXr"/>
+                                            <constraint firstAttribute="height" constant="44" id="4bI-H6-9mh"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="4"/>
+                                        <state key="normal" image="icon_back"/>
+                                        <connections>
+                                            <action selector="back:" destination="9SA-5A-2sr" eventType="touchUpInside" id="5CM-1u-fmg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="gU0-VL-IDh" firstAttribute="centerY" secondItem="cQY-ov-kKU" secondAttribute="centerY" constant="-2" id="b7q-Jr-uPB"/>
+                                    <constraint firstItem="gU0-VL-IDh" firstAttribute="centerX" secondItem="tnt-1s-NA6" secondAttribute="centerX" id="exi-QS-kYY"/>
+                                    <constraint firstItem="cQY-ov-kKU" firstAttribute="leading" secondItem="tnt-1s-NA6" secondAttribute="leading" id="k03-Fn-Xym"/>
+                                    <constraint firstItem="gU0-VL-IDh" firstAttribute="centerY" secondItem="tnt-1s-NA6" secondAttribute="centerY" id="mYm-71-r5D"/>
+                                    <constraint firstAttribute="height" constant="52" id="qK7-qL-UzA"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="haT-wh-R6J">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MSp-61-mvP">
+                                        <rect key="frame" x="12" y="0.0" width="390" height="366"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arV-Np-H6o">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="140"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="140" id="9ZY-FV-8sv"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YY3-2c-Jmz" userLabel="SpacingView">
+                                                <rect key="frame" x="0.0" y="140" width="390" height="26"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="lFz-gQ-0s6"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChE-1d-saG">
+                                                <rect key="frame" x="0.0" y="166" width="390" height="15.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="hhS-jK-rc9"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="ТАЙМКОДЫ">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.50588235290000005" green="0.54901960780000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="13" name="SFProText-Semibold"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0k-y1-8Pd" userLabel="SpacingView">
+                                                <rect key="frame" x="0.0" y="181.5" width="390" height="10"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="10" id="FYU-Xv-ebg"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AJa-Np-HYk">
+                                                <rect key="frame" x="0.0" y="191.5" width="390" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="XzE-bC-rcX"/>
+                                                </constraints>
+                                                <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" image="icon_add_blue_24">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Добавить таймкод">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.2470588235" green="0.54117647059999996" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <font key="NSFont" size="16" name="SFProText-Regular"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapAddTimecode:" destination="9SA-5A-2sr" eventType="touchUpInside" id="fyu-y3-NwD"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MGH-at-LYO" userLabel="SpacingView">
+                                                <rect key="frame" x="0.0" y="235.5" width="390" height="8"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="8" id="8QA-2c-5mc"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отметки времени с названием темы. Позволяют слушателям легче путешествовать по подкасту." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfs-h2-dkW">
+                                                <rect key="frame" x="0.0" y="243.5" width="390" height="30.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="HWK-UI-X81"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="13"/>
+                                                <color key="textColor" red="0.50588235290000005" green="0.54901960780000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfT-e9-jeK" userLabel="SpacingView">
+                                                <rect key="frame" x="0.0" y="274" width="390" height="36"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="0TY-Ln-Alc"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="1pf-ix-XBm">
+                                                <rect key="frame" x="0.0" y="310" width="390" height="44"/>
+                                                <color key="backgroundColor" red="0.28627450980000002" green="0.52549019610000003" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="4fZ-Vd-sPQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="17"/>
+                                                <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                                <state key="normal" title="Далее">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapNext:" destination="9SA-5A-2sr" eventType="touchUpInside" id="fXw-Sv-KOx"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r55-3G-WxJ" userLabel="SpacingView">
+                                                <rect key="frame" x="0.0" y="354" width="390" height="12"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="12" id="3mW-hJ-FTb"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="MSp-61-mvP" secondAttribute="bottom" id="7vM-Qh-2jQ"/>
+                                    <constraint firstItem="MSp-61-mvP" firstAttribute="top" secondItem="haT-wh-R6J" secondAttribute="top" id="RvJ-c7-1Wv"/>
+                                    <constraint firstItem="MSp-61-mvP" firstAttribute="leading" secondItem="haT-wh-R6J" secondAttribute="leading" constant="12" id="bya-Ta-QRO"/>
+                                    <constraint firstAttribute="trailing" secondItem="MSp-61-mvP" secondAttribute="trailing" constant="-12" id="r5m-T6-avd"/>
+                                    <constraint firstItem="MSp-61-mvP" firstAttribute="width" secondItem="haT-wh-R6J" secondAttribute="width" constant="-24" id="u3q-nv-zbp"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="z4N-33-M8w"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="98g-HW-JaH"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9SA-5A-2sr" id="0Q6-e8-gSM"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="haT-wh-R6J" firstAttribute="top" secondItem="tnt-1s-NA6" secondAttribute="bottom" constant="4" id="1to-N2-dZ1"/>
+                            <constraint firstItem="haT-wh-R6J" firstAttribute="leading" secondItem="Qct-er-RyW" secondAttribute="leading" id="7qX-xK-hEE"/>
+                            <constraint firstItem="tnt-1s-NA6" firstAttribute="top" secondItem="Qct-er-RyW" secondAttribute="top" id="KLv-To-vav"/>
+                            <constraint firstItem="Qct-er-RyW" firstAttribute="trailing" secondItem="haT-wh-R6J" secondAttribute="trailing" id="dTz-jm-niS"/>
+                            <constraint firstItem="Qct-er-RyW" firstAttribute="bottom" secondItem="haT-wh-R6J" secondAttribute="bottom" id="o6J-bK-T2T"/>
+                            <constraint firstItem="tnt-1s-NA6" firstAttribute="leading" secondItem="Qct-er-RyW" secondAttribute="leading" id="oUX-hP-bVM"/>
+                            <constraint firstItem="tnt-1s-NA6" firstAttribute="trailing" secondItem="Qct-er-RyW" secondAttribute="trailing" id="uZj-yp-cZ4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qct-er-RyW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WRQ-Kw-hqD"/>
+                    <connections>
+                        <outlet property="stackView" destination="MSp-61-mvP" id="6yZ-FA-BNv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PPV-Ls-CbI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1007" y="98"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="icon_add_blue_24" width="24" height="24"/>
         <image name="icon_add_podcast" width="48" height="48"/>
         <image name="icon_added" width="48" height="48"/>
+        <image name="icon_back" width="20" height="28"/>
     </resources>
 </document>
