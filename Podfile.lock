@@ -1,4 +1,10 @@
 PODS:
+  - AudioKit (4.10.1):
+    - AudioKit/Core (= 4.10.1)
+    - AudioKit/UI (= 4.10.1)
+  - AudioKit/Core (4.10.1)
+  - AudioKit/UI (4.10.1):
+    - AudioKit/Core
   - DifferenceKit (1.1.5):
     - DifferenceKit/Core (= 1.1.5)
     - DifferenceKit/UIKitExtension (= 1.1.5)
@@ -15,12 +21,14 @@ PODS:
     - SteviaLayout (~> 4.7.3)
 
 DEPENDENCIES:
+  - AudioKit (~> 4.0)
   - SnapKit
   - SwiftyListKit
   - YPImagePicker
 
 SPEC REPOS:
   trunk:
+    - AudioKit
     - DifferenceKit
     - PryntTrimmerView
     - SnapKit
@@ -29,6 +37,7 @@ SPEC REPOS:
     - YPImagePicker
 
 SPEC CHECKSUMS:
+  AudioKit: b8e508a0af3dc7d53caf0ca1002b187a662f949e
   DifferenceKit: 516f12e336ed65a3a0665847b5c3cb5cad4bd4ea
   PryntTrimmerView: 67e67573ffd4c073f1308effa66aefd0cfa667a0
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
@@ -36,6 +45,6 @@ SPEC CHECKSUMS:
   SwiftyListKit: 7665c87464276f2a5d423696f64c47ee67d74984
   YPImagePicker: 08bbb809ed62bf4149fc015c97249eb4b9463ff9
 
-PODFILE CHECKSUM: 3288d3eb728c6d1ba2c6f92e540c160364701dab
+PODFILE CHECKSUM: f037265c5db97ddd804d2b7da39b0537bfc071c9
 
 COCOAPODS: 1.8.3
