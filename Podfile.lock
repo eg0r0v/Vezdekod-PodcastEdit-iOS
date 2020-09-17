@@ -21,7 +21,7 @@ PODS:
     - SteviaLayout (~> 4.7.3)
 
 DEPENDENCIES:
-  - AudioKit (~> 4.0)
+  - AudioKit
   - SnapKit
   - SwiftyListKit
   - YPImagePicker
@@ -45,6 +45,6 @@ SPEC CHECKSUMS:
   SwiftyListKit: 7665c87464276f2a5d423696f64c47ee67d74984
   YPImagePicker: 08bbb809ed62bf4149fc015c97249eb4b9463ff9
 
-PODFILE CHECKSUM: f037265c5db97ddd804d2b7da39b0537bfc071c9
+PODFILE CHECKSUM: 586547add7742c7781a5106fce6fde0463aa6ed4
 
 COCOAPODS: 1.5.3

@@ -268,17 +268,12 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arV-Np-H6o">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="156"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEn-he-SEe">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEn-he-SEe" customClass="EZAudioPlot">
                                                         <rect key="frame" x="0.0" y="0.0" width="390" height="96"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="96" id="Gg4-SE-QOz"/>
                                                         </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                                <color key="value" red="0.24705882352941178" green="0.54117647058823526" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N7n-C8-KqI">
                                                         <rect key="frame" x="8" y="104" width="44" height="44"/>
@@ -319,9 +314,6 @@
                                                                 </constraints>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" image="icon_cut"/>
-                                                                <connections>
-                                                                    <action selector="didTapPlay:" destination="9SA-5A-2sr" eventType="touchUpInside" id="EEP-KR-dvb"/>
-                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of4-wv-bT8">
                                                                 <rect key="frame" x="141" y="0.0" width="44" height="44"/>
@@ -333,7 +325,7 @@
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" image="icon_rewind"/>
                                                                 <connections>
-                                                                    <action selector="didTapPlay:" destination="9SA-5A-2sr" eventType="touchUpInside" id="fxa-2F-Aos"/>
+                                                                    <action selector="didTapToBeginning:" destination="9SA-5A-2sr" eventType="touchUpInside" id="Jqo-WV-eUa"/>
                                                                 </connections>
                                                             </button>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AK0-mE-xHW">
@@ -349,9 +341,6 @@
                                                                 </constraints>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" image="icon_add_music-1"/>
-                                                                <connections>
-                                                                    <action selector="didTapPlay:" destination="9SA-5A-2sr" eventType="touchUpInside" id="YGi-nn-coT"/>
-                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiv-eY-4RD">
                                                                 <rect key="frame" x="282" y="0.0" width="44" height="44"/>
@@ -362,9 +351,6 @@
                                                                 </constraints>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" image="icon_fade_in"/>
-                                                                <connections>
-                                                                    <action selector="didTapPlay:" destination="9SA-5A-2sr" eventType="touchUpInside" id="U8v-dB-lmk"/>
-                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxe-GM-mpD">
                                                                 <rect key="frame" x="330" y="0.0" width="44" height="44"/>
@@ -375,9 +361,6 @@
                                                                 </constraints>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" image="icon_fade_out"/>
-                                                                <connections>
-                                                                    <action selector="didTapPlay:" destination="9SA-5A-2sr" eventType="touchUpInside" id="5yb-6k-nVr"/>
-                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -387,13 +370,13 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="CEn-he-SEe" firstAttribute="leading" secondItem="arV-Np-H6o" secondAttribute="leading" id="4e7-mL-Sqr"/>
                                                     <constraint firstAttribute="height" constant="156" id="9ZY-FV-8sv"/>
-                                                    <constraint firstItem="CEn-he-SEe" firstAttribute="leading" secondItem="arV-Np-H6o" secondAttribute="leading" id="BnP-gL-h0F"/>
                                                     <constraint firstAttribute="trailing" secondItem="fjh-nz-tAu" secondAttribute="trailing" constant="8" id="QAL-ya-yAF"/>
-                                                    <constraint firstItem="fjh-nz-tAu" firstAttribute="top" secondItem="CEn-he-SEe" secondAttribute="bottom" constant="8" id="R5j-2p-ZVF"/>
-                                                    <constraint firstItem="CEn-he-SEe" firstAttribute="top" secondItem="arV-Np-H6o" secondAttribute="top" id="Zs1-47-oOZ"/>
+                                                    <constraint firstItem="CEn-he-SEe" firstAttribute="top" secondItem="arV-Np-H6o" secondAttribute="top" id="Rsf-rQ-dRQ"/>
+                                                    <constraint firstItem="fjh-nz-tAu" firstAttribute="top" secondItem="CEn-he-SEe" secondAttribute="bottom" constant="8" id="UTI-al-xpm"/>
                                                     <constraint firstAttribute="bottom" secondItem="fjh-nz-tAu" secondAttribute="bottom" constant="8" id="hAU-zR-435"/>
-                                                    <constraint firstAttribute="trailing" secondItem="CEn-he-SEe" secondAttribute="trailing" id="ilw-DC-aPb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="CEn-he-SEe" secondAttribute="trailing" id="oVa-t3-0kd"/>
                                                     <constraint firstItem="fjh-nz-tAu" firstAttribute="leading" secondItem="arV-Np-H6o" secondAttribute="leading" constant="8" id="zFe-uw-f0N"/>
                                                 </constraints>
                                             </view>
@@ -528,7 +511,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="WRQ-Kw-hqD"/>
                     <connections>
+                        <outlet property="playButton" destination="UIT-E8-Tr2" id="Fna-oy-lO3"/>
                         <outlet property="stackView" destination="MSp-61-mvP" id="6yZ-FA-BNv"/>
+                        <outlet property="waveFormView" destination="CEn-he-SEe" id="TtI-9W-xOz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPV-Ls-CbI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

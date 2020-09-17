@@ -8,13 +8,21 @@
 
 import UIKit
 import AVFoundation
+import AudioKit
+import AudioKitUI
+import SnapKit
 
 final class PodcastEditViewController: UIViewController {
     
     static var identifier: String { String(describing: self) }
     
     @IBOutlet private weak var stackView: UIStackView!
-    private var player: AVAudioPlayer?
+    @IBOutlet private weak var playButton: UIButton!
+
+    
+    @IBOutlet private weak var waveFormView: EZAudioPlot!
+    
+    private var player: EZAudioPlayer?
 
     private var podcast: CreatePodcastSettings!
     
@@ -22,6 +30,28 @@ final class PodcastEditViewController: UIViewController {
     
     func configure(podcast: CreatePodcastSettings) {
         self.podcast = podcast
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setupWaveForm()
+    }
+    
+    private func setupWaveForm() {
+        guard let url = Bundle.main.url(forResource: "Rhododendron", withExtension: "mp3") else { return }
+        let file = EZAudioFile(url: url)
+        guard let data = file?.getWaveformData() else { return }
+
+        waveFormView.plotType = .rolling
+        waveFormView.shouldFill = true
+        waveFormView.shouldMirror = true
+        waveFormView.color = .vkBlueTintColor
+        waveFormView.updateBuffer( data.buffers[0], withBufferSize: data.bufferSize )
+        guard let duration = file?.duration else { return }
+        waveFormView.snp.makeConstraints {
+            $0.width.equalTo(duration * 8)
+        }
     }
     
     @IBAction func back(_ sender: Any) {
@@ -37,17 +67,16 @@ final class PodcastEditViewController: UIViewController {
         
         if isPlaying {
             
+            
             guard let url = Bundle.main.url(forResource: "Rhododendron", withExtension: "mp3") else { return }
             if player == nil {
                 do {
                     try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
                     try AVAudioSession.sharedInstance().setActive(true)
+                } catch {
                     
-                    player = try? AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-                    
-                } catch let error {
-                    debugPrint(error.localizedDescription)
                 }
+                player = EZAudioPlayer(audioFile: EZAudioFile(url: url), delegate: self)
             }
             player?.play()
         } else {
@@ -69,6 +98,11 @@ final class PodcastEditViewController: UIViewController {
         stackView.insertArrangedSubview(timeCodeView, at: index)
     }
     
+    @IBAction func didTapToBeginning(_ sender: UIButton) {
+        waveFormView.clear()
+        player?.seek(toFrame: 0)
+    }
+    
     @IBAction func didTapNext(_ sender: Any) {
         view.endEditing(true)
         
@@ -88,5 +122,14 @@ final class PodcastEditViewController: UIViewController {
 extension PodcastEditViewController: UIScrollViewDelegate {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         view.endEditing(true)
+    }
+}
+
+extension PodcastEditViewController: EZAudioPlayerDelegate {
+    func audioPlayer(_ audioPlayer: EZAudioPlayer!, playedAudio buffer: UnsafeMutablePointer<UnsafeMutablePointer<Float>?>!, withBufferSize bufferSize: UInt32, withNumberOfChannels numberOfChannels: UInt32, in audioFile: EZAudioFile!) {
+
+        DispatchQueue.main.async { [weak self] in
+            self?.waveFormView.updateBuffer(buffer[0], withBufferSize: bufferSize)
+        }
     }
 }
