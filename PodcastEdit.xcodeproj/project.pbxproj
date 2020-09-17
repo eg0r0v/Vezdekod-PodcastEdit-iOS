@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0125013525132C32004A32A8 /* NewPodcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0125013425132C32004A32A8 /* NewPodcastViewController.swift */; };
+		0125013925133275004A32A8 /* TimeDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0125013825133275004A32A8 /* TimeDatePicker.swift */; };
+		0125013B25133674004A32A8 /* Int+Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0125013A25133674004A32A8 /* Int+Time.swift */; };
+		0125013D251342BC004A32A8 /* TimeCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0125013C251342BC004A32A8 /* TimeCodeView.swift */; };
+		01250140251342D9004A32A8 /* TimeCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0125013F251342D9004A32A8 /* TimeCodeView.xib */; };
 		01A8D89D251276D6001DCEBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A8D89C251276D6001DCEBD /* AppDelegate.swift */; };
 		01A8D8A1251276D6001DCEBD /* MyPodcastsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A8D8A0251276D6001DCEBD /* MyPodcastsViewController.swift */; };
 		01A8D8A4251276D6001DCEBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A8D8A2251276D6001DCEBD /* Main.storyboard */; };
@@ -28,8 +33,8 @@
 		01A8D8CF2512797C001DCEBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A8D8CE2512797C001DCEBD /* LaunchScreen.storyboard */; };
 		01A8D8D125127D61001DCEBD /* PodcastAddedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A8D8D025127D61001DCEBD /* PodcastAddedViewController.swift */; };
 		01A8D8D3251296BC001DCEBD /* PodcastEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A8D8D2251296BC001DCEBD /* PodcastEditViewController.swift */; };
-		01A8D8D62512A8F5001DCEBD /* TimeCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A8D8D42512A8F5001DCEBD /* TimeCodeView.xib */; };
-		01A8D8D72512A8F5001DCEBD /* TimeCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A8D8D52512A8F5001DCEBD /* TimeCodeView.swift */; };
+		01A8D8D62512A8F5001DCEBD /* AddTimeCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A8D8D42512A8F5001DCEBD /* AddTimeCodeView.xib */; };
+		01A8D8D72512A8F5001DCEBD /* AddTimeCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A8D8D52512A8F5001DCEBD /* AddTimeCodeView.swift */; };
 		53B1744391E8283F0C96AEAA /* Pods_PodcastEdit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC830EAB19E277477741045 /* Pods_PodcastEdit.framework */; };
 		893CCF8A25129218008A5470 /* CreatePodcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893CCF8925129218008A5470 /* CreatePodcastViewController.swift */; };
 		893CCF8C2512925C008A5470 /* CheckboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893CCF8B2512925C008A5470 /* CheckboxTableViewCell.swift */; };
@@ -54,6 +59,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0125013425132C32004A32A8 /* NewPodcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPodcastViewController.swift; sourceTree = "<group>"; };
+		0125013825133275004A32A8 /* TimeDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDatePicker.swift; sourceTree = "<group>"; };
+		0125013A25133674004A32A8 /* Int+Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Time.swift"; sourceTree = "<group>"; };
+		0125013C251342BC004A32A8 /* TimeCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCodeView.swift; sourceTree = "<group>"; };
+		0125013F251342D9004A32A8 /* TimeCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeCodeView.xib; sourceTree = "<group>"; };
 		01A8D899251276D6001DCEBD /* PodcastEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodcastEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A8D89C251276D6001DCEBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01A8D8A0251276D6001DCEBD /* MyPodcastsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPodcastsViewController.swift; sourceTree = "<group>"; };
@@ -77,8 +87,8 @@
 		01A8D8CE2512797C001DCEBD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01A8D8D025127D61001DCEBD /* PodcastAddedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastAddedViewController.swift; sourceTree = "<group>"; };
 		01A8D8D2251296BC001DCEBD /* PodcastEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastEditViewController.swift; sourceTree = "<group>"; };
-		01A8D8D42512A8F5001DCEBD /* TimeCodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeCodeView.xib; sourceTree = "<group>"; };
-		01A8D8D52512A8F5001DCEBD /* TimeCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeCodeView.swift; sourceTree = "<group>"; };
+		01A8D8D42512A8F5001DCEBD /* AddTimeCodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddTimeCodeView.xib; sourceTree = "<group>"; };
+		01A8D8D52512A8F5001DCEBD /* AddTimeCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTimeCodeView.swift; sourceTree = "<group>"; };
 		2BC830EAB19E277477741045 /* Pods_PodcastEdit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PodcastEdit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80564395478A67FC4DCB51B7 /* Pods-PodcastEdit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PodcastEdit.release.xcconfig"; path = "Pods/Target Support Files/Pods-PodcastEdit/Pods-PodcastEdit.release.xcconfig"; sourceTree = "<group>"; };
 		893CCF8925129218008A5470 /* CreatePodcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePodcastViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +126,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01250133251328AF004A32A8 /* EditPodcast */ = {
+			isa = PBXGroup;
+			children = (
+				01A8D8D2251296BC001DCEBD /* PodcastEditViewController.swift */,
+				01A8D8D52512A8F5001DCEBD /* AddTimeCodeView.swift */,
+				01A8D8D42512A8F5001DCEBD /* AddTimeCodeView.xib */,
+				0125013825133275004A32A8 /* TimeDatePicker.swift */,
+			);
+			path = EditPodcast;
+			sourceTree = "<group>";
+		};
+		0125013E251342C7004A32A8 /* NewPodcast */ = {
+			isa = PBXGroup;
+			children = (
+				0125013425132C32004A32A8 /* NewPodcastViewController.swift */,
+				0125013C251342BC004A32A8 /* TimeCodeView.swift */,
+				0125013F251342D9004A32A8 /* TimeCodeView.xib */,
+			);
+			path = NewPodcast;
+			sourceTree = "<group>";
+		};
 		01A8D890251276D6001DCEBD = {
 			isa = PBXGroup;
 			children = (
@@ -142,11 +173,10 @@
 				893CCF882512920A008A5470 /* Cells */,
 				01A8D89C251276D6001DCEBD /* AppDelegate.swift */,
 				01A8D8A0251276D6001DCEBD /* MyPodcastsViewController.swift */,
-				01A8D8D2251296BC001DCEBD /* PodcastEditViewController.swift */,
-				01A8D8D025127D61001DCEBD /* PodcastAddedViewController.swift */,
 				893CCF9C251299EC008A5470 /* CreatePodcast */,
-				01A8D8D52512A8F5001DCEBD /* TimeCodeView.swift */,
-				01A8D8D42512A8F5001DCEBD /* TimeCodeView.xib */,
+				01250133251328AF004A32A8 /* EditPodcast */,
+				0125013E251342C7004A32A8 /* NewPodcast */,
+				01A8D8D025127D61001DCEBD /* PodcastAddedViewController.swift */,
 				01A8D8C925127959001DCEBD /* Extensions */,
 				01A8D8A2251276D6001DCEBD /* Main.storyboard */,
 				01A8D8A5251276DA001DCEBD /* Assets.xcassets */,
@@ -179,8 +209,10 @@
 		01A8D8C925127959001DCEBD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				893CCFA02512A606008A5470 /* TextField.swift */,
 				01A8D8CA25127959001DCEBD /* UIView+Border.swift */,
 				01A8D8CB25127959001DCEBD /* UIColor+RGB.swift */,
+				0125013A25133674004A32A8 /* Int+Time.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -248,7 +280,6 @@
 		893CCF9F2512A600008A5470 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				893CCFA02512A606008A5470 /* TextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -368,7 +399,7 @@
 			files = (
 				01A8D8C425127834001DCEBD /* TTCommons-DemiBold.ttf in Resources */,
 				01A8D8C225127834001DCEBD /* TTCommons-Medium.ttf in Resources */,
-				01A8D8D62512A8F5001DCEBD /* TimeCodeView.xib in Resources */,
+				01A8D8D62512A8F5001DCEBD /* AddTimeCodeView.xib in Resources */,
 				01A8D8C125127834001DCEBD /* TTCommons-ExtraLight.ttf in Resources */,
 				01A8D8CF2512797C001DCEBD /* LaunchScreen.storyboard in Resources */,
 				893CCFBA2512B110008A5470 /* FileTableViewCell.xib in Resources */,
@@ -376,6 +407,7 @@
 				01A8D8C525127834001DCEBD /* TTCommons-Light.ttf in Resources */,
 				01A8D8A6251276DA001DCEBD /* Assets.xcassets in Resources */,
 				01A8D8BE25127834001DCEBD /* TTCommons-Regular.ttf in Resources */,
+				01250140251342D9004A32A8 /* TimeCodeView.xib in Resources */,
 				01A8D8C825127834001DCEBD /* TTCommons-ExtraBold.ttf in Resources */,
 				01A8D8BF25127834001DCEBD /* TTCommons-Black.ttf in Resources */,
 				01A8D8C325127834001DCEBD /* SF-Pro-Text-Regular.otf in Resources */,
@@ -417,16 +449,27 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PodcastEdit/Pods-PodcastEdit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PodcastEdit/Pods-PodcastEdit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DifferenceKit/DifferenceKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyListKit/SwiftyListKit.framework",
+				"${BUILT_PRODUCTS_DIR}/YPImagePicker/YPImagePicker.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PodcastEdit/Pods-PodcastEdit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DifferenceKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyListKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YPImagePicker.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PodcastEdit/Pods-PodcastEdit-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PodcastEdit/Pods-PodcastEdit-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -438,6 +481,7 @@
 			files = (
 				893CCFA92512A843008A5470 /* ImagePickerService.swift in Sources */,
 				893CCFA42512A69B008A5470 /* TextAndValue.swift in Sources */,
+				0125013525132C32004A32A8 /* NewPodcastViewController.swift in Sources */,
 				01A8D8A1251276D6001DCEBD /* MyPodcastsViewController.swift in Sources */,
 				01A8D8D3251296BC001DCEBD /* PodcastEditViewController.swift in Sources */,
 				01A8D8D125127D61001DCEBD /* PodcastAddedViewController.swift in Sources */,
@@ -449,13 +493,16 @@
 				893CCF8A25129218008A5470 /* CreatePodcastViewController.swift in Sources */,
 				893CCFB02512AA6C008A5470 /* TitleSubtitleAndValue.swift in Sources */,
 				893CCFB32512AE47008A5470 /* LinkTableViewCell.swift in Sources */,
+				0125013D251342BC004A32A8 /* TimeCodeView.swift in Sources */,
 				893CCFB82512B10B008A5470 /* FileTableViewCell.swift in Sources */,
 				01A8D8CC25127959001DCEBD /* UIView+Border.swift in Sources */,
 				893CCFAC2512AA28008A5470 /* EmptyStateTableViewCell.swift in Sources */,
-				01A8D8D72512A8F5001DCEBD /* TimeCodeView.swift in Sources */,
+				0125013925133275004A32A8 /* TimeDatePicker.swift in Sources */,
+				01A8D8D72512A8F5001DCEBD /* AddTimeCodeView.swift in Sources */,
 				01A8D8CD25127959001DCEBD /* UIColor+RGB.swift in Sources */,
 				893CCF9225129297008A5470 /* IconFieldTableViewCell.swift in Sources */,
 				893CCF97251292DE008A5470 /* TextViewTableViewCell.swift in Sources */,
+				0125013B25133674004A32A8 /* Int+Time.swift in Sources */,
 				893CCFA62512A6BD008A5470 /* TextValueIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

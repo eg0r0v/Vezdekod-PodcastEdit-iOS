@@ -11,15 +11,17 @@ import UIKit
 
 final class PodcastEditViewController: UIViewController {
     
-    @IBOutlet private weak var stackView: UIStackView!
-//    @IBOutlet private weak var audioPlot: AKOutputWaveformPlot!
+    static var identifier: String { String(describing: self) }
     
-//    var viewa: AKplot
+    @IBOutlet private weak var stackView: UIStackView!
 
+    private var podcast: CreatePodcastSettings!
     
     private var isPlaying = false
-    private var timeCodes = [Int]()
     
+    func configure(podcast: CreatePodcastSettings) {
+        self.podcast = podcast
+    }
     
     @IBAction func back(_ sender: Any) {
         navigationController?.popViewController(animated: true)
@@ -37,15 +39,29 @@ final class PodcastEditViewController: UIViewController {
         guard let index = stackView.arrangedSubviews.firstIndex(of: sender) else { return }
         
          guard let timeCodeView = Bundle.main
-            .loadNibNamed(String(describing: TimeCodeView.self), owner: self, options: nil)?
-            .compactMap({ $0 as? TimeCodeView })
+            .loadNibNamed(String(describing: AddTimeCodeView.self), owner: self, options: nil)?
+            .compactMap({ $0 as? AddTimeCodeView })
             .first else { return }
         
+        if let podcastTime = podcast.file?.time {
+            timeCodeView.configure(maxLength: podcastTime)
+        }
         stackView.insertArrangedSubview(timeCodeView, at: index)
     }
     
     @IBAction func didTapNext(_ sender: Any) {
         view.endEditing(true)
+        
+        let identifier = NewPodcastViewController.identifier
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(identifier: identifier) as? NewPodcastViewController else { return }
+        
+        let timeCodes = stackView.arrangedSubviews
+            .compactMap({ ($0 as? AddTimeCodeView)?.timeCode })
+        
+        viewController.configure(podcast: podcast, timeCodes: timeCodes)
+        
+        show(viewController, sender: self)
     }
 }
 

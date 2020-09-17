@@ -12,10 +12,10 @@ struct CreatePodcastSettings {
     
     struct File {
         var name: String = ""
-        var time: String = ""
+        var time: Int = 0
     }
     
-    var icon: UIImage? = UIImage(named: "placeholder")
+    var icon: UIImage? = #imageLiteral(resourceName: "placeholder")
     var name: String = ""
     var descriptionText: String = ""
     var allowAbnormalСontent: Bool = false

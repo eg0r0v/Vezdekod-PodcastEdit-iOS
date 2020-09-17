@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxb-aR-muZ">
-                                <rect key="frame" x="30" y="358.5" width="354" height="119.5"/>
+                                <rect key="frame" x="30" y="346.5" width="354" height="143.5"/>
                                 <string key="text">Подкасты. Мобайл
 
-Илья Егоров, Команда лучших разработчиков Вездекода</string>
+Илья Егоров, Александр Шошиашвили, Команда лучших разработчиков Вездекода</string>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

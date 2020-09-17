@@ -76,7 +76,7 @@ struct CreatePosdacstVMF {
     private func getFileStateComponent(file: CreatePodcastSettings.File) -> TableItemViewModel {
         let data = TitleSubtitleAndValue(tag: CreatePosdacstAction.editRecord,
                                          title: file.name,
-                                         subtitle: file.time,
+                                         subtitle: file.time.timeString,
                                          value: "Вы можете добавить таймкоды и скорректировать подкаст в режиме редактирования")
         let item = TableItemViewModel(data: data, map: FileTableViewCell.map)
         return item

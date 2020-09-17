@@ -10,5 +10,8 @@ import UIKit
 
 final class MyPodcastsViewController: UIViewController {
 
+    @IBAction func didTapCreate() {
+        navigationController?.pushViewController(CreatePodcastViewController(), animated: true)
+    }
 }
 

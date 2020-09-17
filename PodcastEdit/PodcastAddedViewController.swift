@@ -10,4 +10,7 @@ import UIKit
 
 final class PodcastAddedViewController: UIViewController {
 
+    @IBAction func back(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
 }

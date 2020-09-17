@@ -37,6 +37,16 @@ final class CreatePodcastViewController: BaseAnimatedTableViewController {
         updateData(withUpdateType: .viewWithoutAnimation)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.backgroundColor = .white
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
     // MARK: - Setup
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -48,6 +58,10 @@ final class CreatePodcastViewController: BaseAnimatedTableViewController {
         tableView.backgroundColor = .systemBackground
         tableView.separatorStyle = .none
         title = "Новый подкаст"
+        
+        var inset = tableView.contentInset
+        inset.bottom += 92
+        tableView.contentInset = inset
         
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(nextButton)
@@ -69,7 +83,6 @@ final class CreatePodcastViewController: BaseAnimatedTableViewController {
             default:
                 break
             }
-            
         }
     }
     
@@ -100,7 +113,30 @@ final class CreatePodcastViewController: BaseAnimatedTableViewController {
     // MARK: - Actions
     
     @objc private func handleNextAction() {
-        print("handleNextAction -> Implement me :)")
+        let identifier = NewPodcastViewController.identifier
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(identifier: identifier) as? NewPodcastViewController else { return }
+        
+        viewController.configure(podcast: settings)
+        
+        show(viewController, sender: self)
+    }
+    
+    private func toEditAudio() {
+        guard settings.isSettingsValid else {
+            let alert = UIAlertController(title: "Внимание", message: "Пожалуйста, заполните основную информацию о подкасте", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true)
+            return
+        }
+        
+        let identifier = PodcastEditViewController.identifier
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(identifier: identifier) as? PodcastEditViewController else { return }
+        
+        viewController.configure(podcast: settings)
+        
+        show(viewController, sender: self)
     }
     
     private func handleAction(_ action: CreatePosdacstAction, parameter: Any?) {
@@ -111,11 +147,11 @@ final class CreatePodcastViewController: BaseAnimatedTableViewController {
             shouldUpdateView = .data
         case .download:
             print("handleAction -> Implement download function here")
-            let file = CreatePodcastSettings.File.init(name: "My_podcast.mp3", time: "59:16")
+            let file = CreatePodcastSettings.File.init(name: "My_podcast.mp3", time: 3556)
             settings.file = file
             shouldUpdateView = .viewWithAnimation
         case .editRecord:
-            print("handleAction -> Implement edit record function here")
+            toEditAudio()
             shouldUpdateView = .data
         case .abnormalСontentItem:
             settings.allowAbnormalСontent = !settings.allowAbnormalСontent

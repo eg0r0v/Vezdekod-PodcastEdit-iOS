@@ -27,7 +27,7 @@ DEPENDENCIES:
   - YPImagePicker
 
 SPEC REPOS:
-  trunk:
+  https://github.com/cocoapods/specs.git:
     - AudioKit
     - DifferenceKit
     - PryntTrimmerView
@@ -47,4 +47,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: f037265c5db97ddd804d2b7da39b0537bfc071c9
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.5.3
