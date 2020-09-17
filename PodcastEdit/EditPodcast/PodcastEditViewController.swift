@@ -7,13 +7,14 @@
 //
 
 import UIKit
-
+import AVFoundation
 
 final class PodcastEditViewController: UIViewController {
     
     static var identifier: String { String(describing: self) }
     
     @IBOutlet private weak var stackView: UIStackView!
+    private var player: AVAudioPlayer?
 
     private var podcast: CreatePodcastSettings!
     
@@ -33,6 +34,25 @@ final class PodcastEditViewController: UIViewController {
         isPlaying.toggle()
         let image = isPlaying ? #imageLiteral(resourceName: "pause_48") : #imageLiteral(resourceName: "icon_play")
         sender.setImage(image, for: .normal)
+        
+        if isPlaying {
+            
+            guard let url = Bundle.main.url(forResource: "Rhododendron", withExtension: "mp3") else { return }
+            if player == nil {
+                do {
+                    try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+                    try AVAudioSession.sharedInstance().setActive(true)
+                    
+                    player = try? AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+                    
+                } catch let error {
+                    debugPrint(error.localizedDescription)
+                }
+            }
+            player?.play()
+        } else {
+            player?.pause()
+        }
     }
     
     @IBAction func didTapAddTimecode(_ sender: UIButton) {

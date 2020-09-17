@@ -12,6 +12,7 @@
 		0125013B25133674004A32A8 /* Int+Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0125013A25133674004A32A8 /* Int+Time.swift */; };
 		0125013D251342BC004A32A8 /* TimeCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0125013C251342BC004A32A8 /* TimeCodeView.swift */; };
 		01250140251342D9004A32A8 /* TimeCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0125013F251342D9004A32A8 /* TimeCodeView.xib */; };
+		0125014625135A94004A32A8 /* Rhododendron.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0125014525135A94004A32A8 /* Rhododendron.mp3 */; };
 		01A8D89D251276D6001DCEBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A8D89C251276D6001DCEBD /* AppDelegate.swift */; };
 		01A8D8A1251276D6001DCEBD /* MyPodcastsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A8D8A0251276D6001DCEBD /* MyPodcastsViewController.swift */; };
 		01A8D8A4251276D6001DCEBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A8D8A2251276D6001DCEBD /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 		0125013A25133674004A32A8 /* Int+Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Time.swift"; sourceTree = "<group>"; };
 		0125013C251342BC004A32A8 /* TimeCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCodeView.swift; sourceTree = "<group>"; };
 		0125013F251342D9004A32A8 /* TimeCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeCodeView.xib; sourceTree = "<group>"; };
+		0125014525135A94004A32A8 /* Rhododendron.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rhododendron.mp3; sourceTree = "<group>"; };
 		01A8D899251276D6001DCEBD /* PodcastEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodcastEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A8D89C251276D6001DCEBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01A8D8A0251276D6001DCEBD /* MyPodcastsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPodcastsViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				01A8D8A5251276DA001DCEBD /* Assets.xcassets */,
 				01A8D8CE2512797C001DCEBD /* LaunchScreen.storyboard */,
 				01A8D8AA251276DA001DCEBD /* Info.plist */,
+				0125014525135A94004A32A8 /* Rhododendron.mp3 */,
 				01A8D8B025127834001DCEBD /* fonts */,
 			);
 			path = PodcastEdit;
@@ -413,6 +416,7 @@
 				01A8D8C325127834001DCEBD /* SF-Pro-Text-Regular.otf in Resources */,
 				01A8D8C025127834001DCEBD /* TTCommons-Bold.ttf in Resources */,
 				893CCF94251292A1008A5470 /* IconFieldTableViewCell.xib in Resources */,
+				0125014625135A94004A32A8 /* Rhododendron.mp3 in Resources */,
 				893CCF99251292E3008A5470 /* TextViewTableViewCell.xib in Resources */,
 				893CCFAE2512AA2D008A5470 /* EmptyStateTableViewCell.xib in Resources */,
 				893CCFB52512AE82008A5470 /* LinkTableViewCell.xib in Resources */,
