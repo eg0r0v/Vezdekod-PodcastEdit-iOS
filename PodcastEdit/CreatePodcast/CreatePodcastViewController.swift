@@ -8,6 +8,8 @@
 
 import UIKit
 import SwiftyListKit
+import AudioKit
+import AudioKitUI
 
 final class CreatePodcastViewController: BaseAnimatedTableViewController {
     
@@ -146,8 +148,12 @@ final class CreatePodcastViewController: BaseAnimatedTableViewController {
             print("handleAction -> Implement link function here")
             shouldUpdateView = .data
         case .download:
-            print("handleAction -> Implement download function here")
-            let file = CreatePodcastSettings.File.init(name: "My_podcast.mp3", time: 3556)
+            
+            guard let url = Bundle.main.url(forResource: "Rhododendron", withExtension: "mp3") else { return }
+            let mfile = EZAudioFile(url: url)
+            
+            let duration = mfile?.duration ?? 3556
+            let file = CreatePodcastSettings.File(name: "Rhododendron.mp3", time: Int(duration))
             settings.file = file
             shouldUpdateView = .viewWithAnimation
         case .editRecord:
